@@ -639,6 +639,7 @@ PRODUCT_PACKAGES += \
     PowerOffAlarm \
     QtiTelephonyService \
     uceShimService \
+    qcrilmsgtunnel \
     dpmserviceapp \
     ims \
     WfdCommon \
