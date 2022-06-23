@@ -86,8 +86,11 @@ cc_prebuilt_library_shared {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libaudioparsers.so"],
 		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libaudioparsers.so"],
+		},
 	},
-	compile_multilib: "32",
+	compile_multilib: "both",
 	check_elf_files: false,
 	prefer: true,
 	soc_specific: true,
@@ -122,23 +125,6 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "32",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libaudioparsers",
-	owner: "lenovo",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libaudioparsers.so"],
-		},
-	},
-	compile_multilib: "64",
 	check_elf_files: false,
 	prefer: true,
 	soc_specific: true,
